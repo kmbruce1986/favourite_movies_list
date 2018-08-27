@@ -1,60 +1,35 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//   const form = document.querySelector('#new-item-form');
-//   form.addEventListener('submit', handleFormSubmit);
-//
-//   // buildList();
-// });
-//
-// // const getList = function() {
-// //   const resultList = document.querySelector('#input-result');
-// //   resultList.textContent = `test`;
-// // }
-//
-// // remeber to use preventDefault to stop it trying to do a post
-// const handleFormSubmit = function(event){
-//   event.preventDefault();
-//   // movieList = getList();
-//   const newMovie = {
-//     title: event.target.title.value,
-//     director: event.target.director.value,
-//     genre: event.target.genre.value
-//   };
-//
-//   movieList.push(newMovie);
-//
-//   event.preventDefault();
-//
-// };
-//
-// const buildList = function(movie){
-//   const movieUl = document.createElement('ul');
-//   const titleLi = document.createElement('li');
-//   titleLi.textContent = `Title: ${movie.title}`;
-//   const directorLi = document.createElement('li');
-//   directorLi.textContent = `Director: ${movie.director}`;
-//   const genreLi = document.createElement('li');
-//   genreLi.textContent = `Genre: ${movie.genre}`;
-//
-//   movieUl.appendChild(titleLi);
-//   movieUl.appendChild(directorLi);
-//   movieUl.appendChild(genreLi);
-//
-//   return movieUl;
-// }
-//
-//
-// const renderList = function(){
-//   const movieDiv = document.querySelector('#movie-list');
-//   readingDiv.innerHTML = "";
-//   const movieList = getList();
-//   movieList.forEach((movie) => {
-//     movieUl = buildList(movie);
-//     movieDiv.appendChild(movieUl);
-//
-//   });
-// }
+// no localStorage
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('#new-item-form');
+  form.addEventListener('submit', handleFormSubmit);
 
 
+});
+
+
+
+// remeber to use preventDefault to stop it trying to do a post
+const handleFormSubmit = function(event){
+  event.preventDefault();
+  const movieUl = document.createElement('ul');
+  const titleLi = document.createElement('li');
+  titleLi.textContent = `Title: ${movie.title}`;
+  const directorLi = document.createElement('li');
+  directorLi.textContent = `Director: ${movie.director}`;
+  const genreLi = document.createElement('li');
+  genreLi.textContent = `Genre: ${movie.genre}`;
+
+  movieUl.appendChild(titleLi);
+  movieUl.appendChild(directorLi);
+  movieUl.appendChild(genreLi);
+
+  return movieUl;
+}
+
+
+
+
+// with localStorage
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#new-item-form');
   form.addEventListener('submit', handleFormSubmit);
